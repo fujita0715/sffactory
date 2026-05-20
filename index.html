@@ -2,24 +2,103 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>sffactory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sffactory | サポート</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       background-color: #000;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero {
+      width: 100%;
       display: flex;
       justify-content: center;
-      align-items: center;
-      height: 100vh;
+      background-color: #000;
     }
-    img {
+
+    .hero img {
+      display: block;
       max-width: 100%;
       height: auto;
+    }
+
+    .content {
+      width: 100%;
+      max-width: 720px;
+      box-sizing: border-box;
+      padding: 32px 24px 48px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin: 0 0 16px;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      margin: 32px 0 12px;
+    }
+
+    p {
+      margin: 0 0 16px;
+      line-height: 1.8;
+      color: #e5e5e5;
+    }
+
+    a {
+      color: #8ecbff;
+    }
+
+    .mail {
+      font-size: 1.05rem;
+      font-weight: 600;
+      word-break: break-all;
+    }
+
+    .note {
+      font-size: 0.95rem;
+      color: #bdbdbd;
     }
   </style>
 </head>
 <body>
-  <img src="developer_header.jpg" alt="sffactory header">
+  <div class="container">
+    <div class="hero">
+      <img src="developer_header.jpg" alt="sffactory header">
+    </div>
+
+    <main class="content">
+      <h1>サポート</h1>
+      <p>
+        sffactoryが提供するアプリに関するご質問、不具合のご報告、その他お問い合わせは、
+        下記のメールアドレスまでご連絡ください。
+      </p>
+
+      <h2>お問い合わせ先</h2>
+      <p class="mail">
+        <a href="mailto:sf.factory.0715@gmail.com">sf.factory.0715@gmail.com</a>
+      </p>
+
+      <h2>対応内容</h2>
+      <p>
+        アプリの使い方に関するご質問、不具合報告、ご意見・ご要望などを受け付けています。
+      </p>
+
+      <p class="note">
+        個人開発者によるサポートページです。お問い合わせ内容を確認のうえ、順次対応いたします。
+      </p>
+    </main>
+  </div>
 </body>
 </html>
