@@ -33,22 +33,23 @@
 
   <script>
     (function () {
-      var iosUrl = "https://apps.apple.com/jp/app/id6762104317";
-      var androidUrl = "https://play.google.com/store/apps/details?id=com.sffactory.mahjongscoresheet";
+      var IOS_STORE_URL = "https://apps.apple.com/jp/app/id6762104317";
+      var ANDROID_STORE_URL = "https://play.google.com/store/apps/details?id=com.sffactory.mahjongscoresheet";
       var ua = navigator.userAgent || "";
-      var isModernIPad = /Macintosh/i.test(ua) && navigator.maxTouchPoints > 1;
+      var touchPoints = navigator.maxTouchPoints || 0;
+      var isModernIPad = /Macintosh/i.test(ua) && touchPoints > 1;
       var isAndroid = /Android/i.test(ua);
       var isIOS = /iPhone|iPad|iPod/i.test(ua) || isModernIPad;
       var iosLink = document.getElementById("ios-link");
       var androidLink = document.getElementById("android-link");
 
-      iosLink.href = iosUrl;
-      androidLink.href = androidUrl;
+      iosLink.href = IOS_STORE_URL;
+      androidLink.href = ANDROID_STORE_URL;
 
       if (isAndroid) {
-        window.location.replace(androidUrl);
+        window.location.replace(ANDROID_STORE_URL);
       } else if (isIOS) {
-        window.location.replace(iosUrl);
+        window.location.replace(IOS_STORE_URL);
       }
     })();
   </script>
