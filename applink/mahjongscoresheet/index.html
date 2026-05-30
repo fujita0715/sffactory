@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>麻雀スコア表 ダウンロード | SF Factory</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="麻雀スコア表アプリの共通ダウンロードページ">
+  <link rel="canonical" href="https://www.sffactory.jp/applink/mahjongscoresheet/">
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; line-height: 1.7; margin: 0; padding: 24px; max-width: 900px; }
+    h1 { font-size: 1.6rem; margin: 0 0 8px; }
+    p { margin: 0.6rem 0; }
+    .links { margin-top: 18px; display: grid; gap: 10px; max-width: 460px; }
+    .button {
+      display: inline-block;
+      text-decoration: none;
+      border: 1px solid #cfcfcf;
+      border-radius: 10px;
+      padding: 12px 14px;
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+  <h1>麻雀スコア表 ダウンロード</h1>
+  <p>お使いの端末に応じて、ストアへ移動します。</p>
+  <p>自動で移動しない場合は、以下のリンクをタップしてください。</p>
+
+  <div class="links">
+    <a id="ios-link" class="button" href="#" rel="noopener">App Store (iOS)</a>
+    <a id="android-link" class="button" href="#" rel="noopener">Google Play (Android)</a>
+  </div>
+
+  <script>
+    (function () {
+      var IOS_STORE_URL = "https://apps.apple.com/jp/app/id6762104317";
+      var ANDROID_STORE_URL = "https://play.google.com/store/apps/details?id=com.sffactory.mahjongscoresheet";
+      var ua = navigator.userAgent || "";
+      var touchPoints = navigator.maxTouchPoints || 0;
+      var isModernIPad = /Macintosh/i.test(ua) && touchPoints > 1;
+      var isAndroid = /Android/i.test(ua);
+      var isIOS = /iPhone|iPad|iPod/i.test(ua) || isModernIPad;
+      var iosLink = document.getElementById("ios-link");
+      var androidLink = document.getElementById("android-link");
+
+      iosLink.href = IOS_STORE_URL;
+      androidLink.href = ANDROID_STORE_URL;
+
+      if (isAndroid) {
+        window.location.replace(ANDROID_STORE_URL);
+      } else if (isIOS) {
+        window.location.replace(IOS_STORE_URL);
+      }
+    })();
+  </script>
+</body>
+</html>
