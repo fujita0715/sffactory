@@ -27,14 +27,14 @@
   <p>自動で移動しない場合は、以下のリンクをタップしてください。</p>
 
   <div class="links">
-    <a class="button" href="https://apps.apple.com/jp/app/id6762104317" rel="noopener">App Store (iOS)</a>
-    <a class="button" href="https://play.google.com/store/apps/details?id=com.sffactory.mahjongscoresheet" rel="noopener">Google Play (Android)</a>
+    <a id="ios-link" class="button" href="https://apps.apple.com/jp/app/id6762104317" rel="noopener">App Store (iOS)</a>
+    <a id="android-link" class="button" href="https://play.google.com/store/apps/details?id=com.sffactory.mahjongscoresheet" rel="noopener">Google Play (Android)</a>
   </div>
 
   <script>
     (function () {
-      var iosUrl = "https://apps.apple.com/jp/app/id6762104317";
-      var androidUrl = "https://play.google.com/store/apps/details?id=com.sffactory.mahjongscoresheet";
+      var iosUrl = document.getElementById("ios-link").href;
+      var androidUrl = document.getElementById("android-link").href;
       var ua = navigator.userAgent || "";
       var isAndroid = /Android/i.test(ua);
       var isIOS = /iPhone|iPad|iPod/i.test(ua);
