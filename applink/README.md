@@ -6,6 +6,8 @@ QR コードはこの共通 URL を指すように作成し、アクセス端末
 ## 現在の共通URL
 
 - 麻雀スコア表: `https://www.sffactory.jp/applink/mahjongscoresheet/`
+- 麻雀スコア計算: `https://www.sffactory.jp/applink/mahjongscorecalculation/`
+- ちんいつナビ: `https://www.sffactory.jp/applink/chinitsunavigator/`
 
 ## 新しいアプリを追加する手順
 
